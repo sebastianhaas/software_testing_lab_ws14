@@ -51,6 +51,29 @@ public class SportsIDSeleniumHelper {
   public void assertOnLoginPage() {
 		assertNotNull(driver.findElement(By.xpath("//*[@id=\"login-button\"]/span")));
   }
+//*[@id="members-table"]/thead/tr[2]/th[2]/div/input
+  public void loadMemberListPage() {
+	  driver.get(baseUrl + "/admin.html#pages.member.list");
+  }
+  
+  @Test
+  public void assertOnMemberListPage() {
+		assertNotNull(driver.findElement(By.xpath("//*[@id=\"new-member\"]/span/span")));		
+  }
+  
+  @Test
+  public void assertMemberTest1Exists() {
+		assertNotNull(driver.findElement(By.xpath("//*[@id=\"members-table\"]/tbody/tr/td[2]")));
+  }
+  
+  @Test
+  public void searchForTEST1(){
+	    driver.findElement(By.xpath("//*[@id=\"members-table\"]/thead/tr[2]/th[2]/div/input")).click();
+	    driver.findElement(By.xpath("//*[@id=\"members-table\"]/thead/tr[2]/th[2]/div/input")).clear();
+	    driver.findElement(By.xpath("//*[@id=\"members-table\"]/thead/tr[2]/th[2]/div/input")).sendKeys("TEST1");
+  }
+  
+
 
 
   @After
