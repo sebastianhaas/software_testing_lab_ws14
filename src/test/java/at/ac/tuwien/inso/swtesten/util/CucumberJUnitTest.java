@@ -16,8 +16,8 @@ import cucumber.api.junit.Cucumber;
  * when developing your own Cucumber test cases in the lab.
  */
 
-/*@RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/resources/sample"}, 
+@RunWith(Cucumber.class)
+/*@CucumberOptions(features = {"src/test/resources/sample"}, 
 				 glue = {"at.ac.tuwien.inso.swtesten.sample"}, 
 				 format = {"html:target/cucumber-html-report","json:target/cucumber-json-report.json"}
 )*/
